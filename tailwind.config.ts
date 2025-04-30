@@ -64,9 +64,11 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				algebra: {
-					blue: '#4361EE',
-					purple: '#7209B7',
-					light: '#F8F9FA',
+					blue: '#7FB3D5',    // Updated to a softer blue
+					purple: '#7209B7',  // Keep this for contrast in some elements
+					light: '#F5F5DC',   // Cream color
+					cream: '#F5F5DC',   // Explicit cream color
+					skyblue: '#D3E4FD'  // Soft sky blue
 				}
 			},
 			borderRadius: {

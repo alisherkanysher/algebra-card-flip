@@ -1,13 +1,14 @@
 
 import React, { useState } from 'react';
-import { Card } from '../data/cards';
+import { Card, Language } from '../data/cards';
 import { cn } from '@/lib/utils';
 
 interface FlashCardProps {
   card: Card;
+  language: Language;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ card }) => {
+const FlashCard: React.FC<FlashCardProps> = ({ card, language }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   return (
@@ -18,14 +19,18 @@ const FlashCard: React.FC<FlashCardProps> = ({ card }) => {
       )}
       onClick={() => setIsFlipped(!isFlipped)}
     >
-      <div className="flashcard-inner rounded-xl">
-        <div className="flashcard-front rounded-xl bg-algebra-blue text-white">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">Вопрос</h2>
-          <p className="text-lg md:text-xl">{card.question}</p>
+      <div className="flashcard-inner rounded-xl shadow-lg">
+        <div className="flashcard-front rounded-xl bg-algebra-skyblue text-slate-800">
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            {language === 'ru' ? 'Вопрос' : language === 'en' ? 'Question' : 'Сұрақ'}
+          </h2>
+          <p className="text-lg md:text-xl">{card.question[language]}</p>
         </div>
-        <div className="flashcard-back rounded-xl bg-algebra-purple text-white">
-          <h2 className="text-xl md:text-2xl font-bold mb-4">Ответ</h2>
-          <p className="text-lg md:text-xl">{card.answer}</p>
+        <div className="flashcard-back rounded-xl bg-algebra-cream text-slate-800">
+          <h2 className="text-xl md:text-2xl font-bold mb-4">
+            {language === 'ru' ? 'Ответ' : language === 'en' ? 'Answer' : 'Жауап'}
+          </h2>
+          <p className="text-lg md:text-xl">{card.answer[language]}</p>
         </div>
       </div>
     </div>
