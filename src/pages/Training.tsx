@@ -58,7 +58,7 @@ const Training = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col p-4 md:p-8 bg-algebra-cream">
+    <div className="min-h-screen flex flex-col p-4 md:p-8 bg-algebra-dark text-white">
       <div className="container mx-auto flex flex-col flex-grow">
         <header className="flex justify-between items-center mb-6">
           <Link to="/" className="text-algebra-blue hover:opacity-80 transition-colors">
@@ -68,7 +68,7 @@ const Training = () => {
             <Button 
               variant="outline" 
               onClick={cycleLanguage}
-              className="flex items-center gap-2 bg-white border-algebra-blue text-algebra-blue hover:bg-algebra-skyblue"
+              className="flex items-center gap-2 border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20"
             >
               <Globe className="w-4 h-4" />
               {getLanguageName(language)}
@@ -76,7 +76,7 @@ const Training = () => {
             <Button 
               variant="outline" 
               onClick={handleShuffle}
-              className={`flex items-center gap-2 ${isRandom ? 'bg-algebra-blue text-white' : 'bg-white border-algebra-blue text-algebra-blue hover:bg-algebra-skyblue'}`}
+              className={`flex items-center gap-2 ${isRandom ? 'bg-algebra-blue text-white' : 'border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20'}`}
             >
               <Shuffle className="w-4 h-4" />
               {language === 'ru' ? (isRandom ? 'Случайный порядок' : 'Обычный порядок') : 
@@ -101,7 +101,7 @@ const Training = () => {
             onClick={handlePrevious} 
             disabled={currentIndex === 0}
             variant="outline"
-            className="px-8 bg-white border-algebra-blue text-algebra-blue hover:bg-algebra-skyblue"
+            className="px-8 border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20"
           >
             {language === 'ru' ? 'Назад' : language === 'en' ? 'Back' : 'Артқа'}
           </Button>

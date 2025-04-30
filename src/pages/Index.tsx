@@ -73,30 +73,30 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-algebra-skyblue to-algebra-blue flex flex-col items-center justify-center p-4 text-slate-800">
+    <div className="min-h-screen bg-gradient-to-b from-algebra-blue to-algebra-dark flex flex-col items-center justify-center p-4 text-white">
       <div className="absolute top-4 right-4">
         <Button 
           variant="outline" 
           onClick={cycleLanguage}
-          className="flex items-center gap-2 bg-white/80 hover:bg-white"
+          className="flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/30 hover:bg-white/20 text-white"
         >
           <Globe className="w-4 h-4" />
           {getLanguageName(language)}
         </Button>
       </div>
       
-      <div className="text-center max-w-3xl bg-white/30 backdrop-blur-sm p-8 rounded-xl">
+      <div className="text-center max-w-3xl bg-black/20 backdrop-blur-sm p-8 rounded-xl border border-white/10">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">{getTitle()}</h1>
         <p className="text-xl md:text-2xl mb-8">{getSubtitle()}</p>
         <p className="text-lg md:text-xl mb-12">{getDescription()}</p>
         
         <Link to="/training" state={{ language }}>
-          <Button className="bg-white text-algebra-blue hover:bg-algebra-cream hover:text-algebra-blue text-lg px-8 py-6 rounded-full transition-all transform hover:scale-105">
+          <Button className="bg-algebra-blue text-white hover:bg-algebra-darkBlue text-lg px-8 py-6 rounded-full transition-all transform hover:scale-105">
             {getStartButtonText()}
           </Button>
         </Link>
         
-        <div className="mt-16 text-sm md:text-base">
+        <div className="mt-16 text-sm md:text-base text-white/80">
           <p>{getFooterText1()}</p>
           <p className="mt-2">{getFooterText2()}</p>
         </div>

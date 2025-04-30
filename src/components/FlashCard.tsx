@@ -20,13 +20,13 @@ const FlashCard: React.FC<FlashCardProps> = ({ card, language }) => {
       onClick={() => setIsFlipped(!isFlipped)}
     >
       <div className="flashcard-inner rounded-xl shadow-lg">
-        <div className="flashcard-front rounded-xl bg-algebra-skyblue text-slate-800">
+        <div className="flashcard-front rounded-xl bg-algebra-blue text-white">
           <h2 className="text-xl md:text-2xl font-bold mb-4">
             {language === 'ru' ? 'Вопрос' : language === 'en' ? 'Question' : 'Сұрақ'}
           </h2>
           <p className="text-lg md:text-xl">{card.question[language]}</p>
         </div>
-        <div className="flashcard-back rounded-xl bg-algebra-cream text-slate-800">
+        <div className="flashcard-back rounded-xl bg-algebra-dark text-white">
           <h2 className="text-xl md:text-2xl font-bold mb-4">
             {language === 'ru' ? 'Ответ' : language === 'en' ? 'Answer' : 'Жауап'}
           </h2>
