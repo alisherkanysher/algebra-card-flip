@@ -61,14 +61,14 @@ const Training = () => {
     <div className="min-h-screen flex flex-col p-4 md:p-8 bg-algebra-dark text-white">
       <div className="container mx-auto flex flex-col flex-grow">
         <header className="flex justify-between items-center mb-6">
-          <Link to="/" className="text-algebra-blue hover:opacity-80 transition-colors">
+          <Link to="/" className="text-algebra-light hover:opacity-80 transition-colors">
             ← {language === 'ru' ? 'На главную' : language === 'en' ? 'Main page' : 'Басты бетке'}
           </Link>
           <div className="flex gap-2">
             <Button 
               variant="outline" 
               onClick={cycleLanguage}
-              className="flex items-center gap-2 border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20"
+              className="flex items-center gap-2 border-algebra-light text-algebra-light hover:bg-algebra-light/20"
             >
               <Globe className="w-4 h-4" />
               {getLanguageName(language)}
@@ -76,7 +76,7 @@ const Training = () => {
             <Button 
               variant="outline" 
               onClick={handleShuffle}
-              className={`flex items-center gap-2 ${isRandom ? 'bg-algebra-blue text-white' : 'border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20'}`}
+              className={`flex items-center gap-2 ${isRandom ? 'bg-algebra-blue text-white' : 'border-algebra-light text-algebra-light hover:bg-algebra-light/20'}`}
             >
               <Shuffle className="w-4 h-4" />
               {language === 'ru' ? (isRandom ? 'Случайный порядок' : 'Обычный порядок') : 
@@ -101,14 +101,14 @@ const Training = () => {
             onClick={handlePrevious} 
             disabled={currentIndex === 0}
             variant="outline"
-            className="px-8 border-algebra-blue text-algebra-blue hover:bg-algebra-blue/20"
+            className="px-8 border-algebra-light text-algebra-light hover:bg-algebra-light/20"
           >
             {language === 'ru' ? 'Назад' : language === 'en' ? 'Back' : 'Артқа'}
           </Button>
           <Button 
             onClick={handleNext} 
             disabled={currentIndex === cards.length - 1}
-            className="bg-algebra-blue hover:opacity-90 px-8 text-white"
+            className="bg-algebra-blue hover:bg-algebra-lightBlue px-8 text-white"
           >
             {language === 'ru' ? 'Вперёд' : language === 'en' ? 'Next' : 'Алға'}
           </Button>

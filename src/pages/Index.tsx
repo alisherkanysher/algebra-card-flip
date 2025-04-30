@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -91,7 +90,7 @@ const Index = () => {
         <p className="text-lg md:text-xl mb-12">{getDescription()}</p>
         
         <Link to="/training" state={{ language }}>
-          <Button className="bg-algebra-blue text-white hover:bg-algebra-darkBlue text-lg px-8 py-6 rounded-full transition-all transform hover:scale-105">
+          <Button className="bg-algebra-blue text-white hover:bg-algebra-lightBlue text-lg px-8 py-6 rounded-full transition-all transform hover:scale-105">
             {getStartButtonText()}
           </Button>
         </Link>
